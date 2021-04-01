@@ -52,7 +52,7 @@ class FollowerFragment : Fragment() {
     fun getFollowers(userID: String){
         binding.progressBar2.visibility = View.VISIBLE
         val asyncClient = AsyncHttpClient()
-        asyncClient.addHeader("Authorization", "token 5514ff33c707f0fdf056b378f11ca896da2dd2fc")
+        asyncClient.addHeader("Authorization", "INSERT TOKEN HERE")
         asyncClient.addHeader("User-Agent", "request")
         asyncClient.get("https://api.github.com/users/$userID/followers", object : AsyncHttpResponseHandler(){
             override fun onSuccess(
