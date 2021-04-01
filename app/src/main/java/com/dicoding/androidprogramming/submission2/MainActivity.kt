@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     fun getUser(){
         binding.progressBar.visibility = View.VISIBLE
         val asyncClient = AsyncHttpClient()
-        asyncClient.addHeader("Authorization", "token 5514ff33c707f0fdf056b378f11ca896da2dd2fc")
+        asyncClient.addHeader("Authorization", "INSERT TOKEN HERE")
         asyncClient.addHeader("User-Agent", "request")
         asyncClient.get("https://api.github.com/users", object : AsyncHttpResponseHandler(){
             override fun onSuccess(
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
     fun getUserQuery(query: String){
         binding.progressBar.visibility = View.VISIBLE
         val asyncClient = AsyncHttpClient()
-        asyncClient.addHeader("Authorization", "token 5514ff33c707f0fdf056b378f11ca896da2dd2fc")
+        asyncClient.addHeader("Authorization", "INSERT TOKEN HERE")
         asyncClient.addHeader("User-Agent", "request")
         asyncClient.get("https://api.github.com/search/users?q=$query", object : AsyncHttpResponseHandler(){
             override fun onSuccess(
@@ -139,7 +139,7 @@ class MainActivity : AppCompatActivity() {
     fun setUser(userID: String?){
         binding.progressBar.visibility = View.VISIBLE
         val asyncClient = AsyncHttpClient()
-        asyncClient.addHeader("Authorization", "token 5514ff33c707f0fdf056b378f11ca896da2dd2fc")
+        asyncClient.addHeader("Authorization", "INSERT TOKEN HERE")
         asyncClient.addHeader("User-Agent", "request")
         asyncClient.get("https://api.github.com/users/$userID", object : AsyncHttpResponseHandler(){
             override fun onSuccess(
